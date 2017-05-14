@@ -3,7 +3,9 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings")
+    # 현재 ot.settings.py가 settings/common.py로 이동했기 때문에 .dev를 prefix로 붙여줌.
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings.dev")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

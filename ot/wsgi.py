@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings")
+# Default 값을 ot.settings -> ot.settings.dev 로 수정
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ot.settings.dev")
 
 application = get_wsgi_application()
